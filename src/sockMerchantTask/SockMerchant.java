@@ -43,7 +43,7 @@ public class SockMerchant {
         }
 
         int result = sockMerchant(n, ar);
-
+        System.out.println(result);
         scanner.close();
     }
 }
