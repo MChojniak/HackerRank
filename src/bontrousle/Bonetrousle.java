@@ -14,10 +14,11 @@ public class Bonetrousle {
         for (long i = 1; i <= b; i++) {
             stickCounterList.add(i);
         }
-
-        long min = (b * (b + 1)) / 2;
-        long max = (b * (2 * k - b + 1)) / 2;
         // min and max values for b boxes
+        long min = (b * (b + 1L)) / 2;
+        long max = (b * (2L * k - b + 1)) / 2;
+
+        // n should between them
         if (!(n >= min && n <= max)) {
             return new long[]{-1};
         }
@@ -32,8 +33,8 @@ public class Bonetrousle {
         }
         stickCounterList.set(stickCounterList.size() - 1, stickCounterList.size() - 1 + valToAdd + rest);
 
-        long[] longs = transferListToLongArray(stickCounterList);
-        return longs;
+        long[] result = transferListToLongArray(stickCounterList);
+        return result;
     }
 
     private static long[] transferListToLongArray(List<Long> counterMap) {
